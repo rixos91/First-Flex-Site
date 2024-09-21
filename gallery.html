@@ -1,0 +1,97 @@
+<body>
+  <style>
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+
+    li {
+      height: 40vh;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: content;
+    }
+
+    img {
+      max-height: 100%;
+      min-width: 100%;
+      object-fit: cover;
+      vertical-align: bottom;
+    }
+    @media (max-aspect-ratio: 1/1) {
+      li {
+        height: 30vh;
+      }
+    }
+    @media (max-height: 480px) {
+      li {
+        height: 80vh;
+      }
+    }
+    @media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+      ul {
+        flex-direction: row;
+      }
+
+      li {
+        height: auto;
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        max-height: 75vh;
+        min-width: 0;
+      }
+    }
+  </style>
+  <ul>
+    <li>
+      <img src="./images/20230531_212137.jpg" loading="lazy" />
+    </li>
+    <li>
+      <img src="./images/20230531_212521.jpg" loading="lazy" />
+    </li>
+    <li>
+      <img src="./images/20230531_215713.jpg" loading="lazy" />
+    </li>
+    <li>
+      <img src="./images/20230601_090707.jpg" loading="lazy" />
+    </li>
+    <li>
+      <img src="./images/20230601_095837.jpg" loading="lazy" />
+    </li>
+    <li>
+      <img src="./images/20230601_143547.jpg" loading="lazy" />
+    </li>
+    <li>
+      <img src="./images/20230601_204440.jpg" loading="lazy" />
+    </li>
+    <li>
+      <img src="./images/20230602_091900.jpg" loading="lazy" />
+    </li>
+    <li>
+      <img src="./images/20230602_091929.jpg" loading="lazy" />
+    </li>
+    <li>
+      <img src="./images/20230603_115639.jpg" loading="lazy" />
+    </li>
+    <li>
+      <img src="./images/20230603_130943.jpg" loading="lazy" />
+    </li>
+    <li>
+      <img src="./images/20230604_184446.jpg" loading="lazy" />
+    </li>
+    <li>
+      <img src="./images/20230604_114714.jpg" loading="lazy" />
+    </li>
+    <li>
+      <img src="./images/IMG-20230602-WA0038.jpg" loading="lazy" />
+    </li>
+    <li>
+      <img src="./images/firenze.jpg" loading="lazy" />
+    </li>
+  </ul>
+  <a href="./index.html">Homepage</a>
+</body>

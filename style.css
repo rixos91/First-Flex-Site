@@ -1,0 +1,185 @@
+
+/*impostiamo l immagine di sfondo*/
+
+body{
+    background-color:rgb(206, 241, 227);
+    background-image: url(./images/firenze.jpg);
+    background-size: cover;
+   
+}
+
+/*facciamo in modo che il testo si colori al passaggio del mouse*/
+
+span:hover {
+    color: rgb(35, 123, 201);
+}
+
+
+/*facciamo in modo che invece della scritta blu sottolineata
+dovuta al href, si abbia la scritta nera normale*/
+.info a{
+    color: black;
+    text-decoration: none;
+    
+}
+
+.contact a{
+        color: black;
+        text-decoration: none;
+        
+    }
+
+.gallery a{
+    color: black;
+    text-decoration: none;
+    
+}
+
+
+/*rendiamo il layout con flexbox, con row l allineamento va da
+sinistra a destra, con wrap i contenitori si disporranno su linee
+multiple invece che sulla stessa linea*, con l opacity  rendiamo il
+contenitore un pelo trasparente*/
+
+.container{
+    display: flex;  
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center; 
+    opacity: 0.9;
+}
+
+/*in questo modo è distanziato in maniera uniforma e anche 
+l immagine non si attacca agli altri div*/
+    
+.container > * {
+    padding: 10px;
+    
+  }
+
+  /*impostando inline flex su header, facciamo in modo che questo div
+  e il suo interno sia fermo su una sola linea 
+   col justify li posizioniamo come vogliamo*/
+  .header {
+    background: #F5F5F5;
+    width: 100%;
+    gap: 20px;
+    display: inline-flex;
+    justify-content: space-around;
+
+  }
+
+  /*stessa cosa per il footer, inline flex e con justify and align
+  posizioniamo la scritta dove vogliamo*/
+  .footer{
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color: #424242;
+    color: #F5F5F5;
+    height: 50px;
+    width: 100%;
+  
+  }
+
+
+  /*diamo lo sfondo al div centrale, impostiamo l altezza totale e 
+  il font*/
+  .main{
+    background-color: #48CFCB;
+    text-align:center;
+    height: 150vh;
+    font-size: 2rem;
+    font-family: Sofadi One;
+    font-weight: normal ;
+    line-height: 2rem;
+  
+  
+  }
+
+  /*in questo modo l immagine riempie tutto il div,
+  se volessimo un immagine piu piccola e il testo che ruota attorno
+  all immagine, possiamo scriverlo cosi:
+  .mare{
+    width: 50%;
+    float: left;
+  }*/
+  .mare{
+    width: 100%;
+    
+  }
+
+  /*impostiamo sempre colore sfondo altezza e ampiezza
+  dei div laterali*/
+  .aside-1{
+    background-color: #229799;
+    height: 150vh;
+    width: 100%;
+   
+  }
+
+  /*impostiamo la lista senza stile, quindi senza i classici
+  pallini neri e il distanziamento*/
+  .aside-1 > ul{
+    list-style: none;
+    padding: 10px;
+    margin-top: 0px;
+  }
+
+  .aside-2 > ul{
+    list-style: none;
+    padding: 10px;
+    margin-top: 0px;
+  }
+
+  /*impostiamo tipo di font e il distanziamento tra le scritte
+  con line height*/
+  li{
+    margin-bottom: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal ;
+    line-height: 3rem;
+
+  }
+/*impostiamo sempre colore sfondo altezza e ampiezza
+  dei div laterali*/
+  .aside-2{
+    background-color: #229799;
+    height: 150vh;
+    width: 100%;
+    
+  }
+ 
+
+  /*il padding sul body permette di avere un po di spazio laterale*/
+  
+  body {
+    padding: 2em; 
+  }
+
+/*con questi media facciamo in modo che il layout sia impostato correttamente
+
+con i div aside laterali*/
+
+  @media all and (min-width: 699px) {
+    .aside { flex: 1 0 0; }
+    
+  }
+  
+  @media all and (min-width: 700px) {
+    .main    { flex: 3 0px; }
+    .aside-1 { order: 1; } 
+    .main    { order: 2; }
+    .aside-2 { order: 3; }
+    .footer  { order: 4; }
+    
+  }
+
+  /*con questo media si dovrebbe regolare il font size e il 
+  distanziamento tra i caratteri per la width impostata*/
+  @media screen and (max-width: 480px) {
+    html {
+       font-size: 15px;
+       line-height: 120%;
+    }
+ }
